@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Meme Generator 🐱</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat Meme Generator 🐱</h1>
+
+    <form method="post">
+        <input type="text" name="prompt" placeholder="Describe your cat moment..." required>
+        <br>
+        <button type="submit">Generate Meme</button>
+    </form>
+
+    {% if meme_path %}
+        <h2>Your Meme:</h2>
+        <img src="{{ meme_path }}" alt="Generated Cat Meme" width="500">
+    {% endif %}
+</body>
+</html>
